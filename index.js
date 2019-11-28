@@ -8,7 +8,12 @@
 function spanishSentence (arg) {
   
   /* Write your code heeeeeere */
-  
+  if (!Array.isArray(arg)) return 'Give me arrays only! Por favor!';
+  let counter = 0;
+  for (let i = 0; i < arg.length; i++){
+    if ((arg[i][0] === '¿' && arg[i][arg[i].length-1] === '?') || (arg[i][0] === '¡' && arg[i][arg[i].length-1] === '!')) counter++;
+  }
+  return counter === 1 ? `¡${counter} spanish sentence here!` : `¡${counter} spanish sentences here!`;
 }
 
 
