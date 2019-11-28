@@ -6,9 +6,22 @@
 // spanishSentence(undefined) //should 'Give me arrays only! Por favor!'
 
 function spanishSentence (arg) {
-  
+  const plural = 's';
+  if (!Array.isArray(arg)) return 'Give me arrays only! Por favor!';
+  else {
+    let counter = 0;
+    const upsideDownQuestionMark = '¿';
+    const upsideDownExclamationMark = '¡';
+    for (let i = 0; i < arg.length; i++) {
+      let word = arg[i];
+      if (word[0] === upsideDownQuestionMark && word[arg[i].length - 1] === '?' || word[0] === upsideDownExclamationMark && word[arg[i].length - 1] === '!') counter++
+
+    }
+    if (counter === 1) return `¡${counter} spanish sentence here!`;
+    else return `¡${counter} spanish sentences here!`;
+  }
   /* Write your code heeeeeere */
-  
+
 }
 
 
