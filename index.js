@@ -6,10 +6,15 @@
 // spanishSentence(undefined) //should 'Give me arrays only! Por favor!'
 
 function spanishSentence (arg) {
-  
-  /* Write your code heeeeeere */
-  
+let count = 0;
+for(let sentence of arg) {
+  if(sentence.charCodeAt(0) === 161 || sentence.charCodeAt(0) === 191) {
+    count++;
+  }
+}
+ return `¡${count} spanish sentences here!` 
 }
 
-
 module.exports = spanishSentence;
+
+spanishSentence(['How are you?', '¿How are you?',  'It is you', '¡It is you', '¡You are awesome!']) // should return '¡2 spanish sentences here!'
