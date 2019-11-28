@@ -1,0 +1,29 @@
+{
+  "name": "algo-rithms",
+  "version": "1.0.0",
+  "description": "Algo Rithms template for Codework students",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeworks/algo-rithms.git"
+  },
+  "author": "Codeworks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codeworks/algo-rithms/issues"
+  },
+  "homepage": "https://github.com/codeworks/algo-rithms#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0"
+  }
+}
