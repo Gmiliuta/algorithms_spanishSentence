@@ -6,9 +6,14 @@
 // spanishSentence(undefined) //should 'Give me arrays only! Por favor!'
 
 function spanishSentence (arg) {
-  
+  if (!Array.isArray(arg)) return 'Give me arrays only! Por favor!';
+  if (arg.length === 0) return '¡0 spanish sentences here!';
   /* Write your code heeeeeere */
-  
+  let n = 0;
+  arg.forEach(e => {
+    if ((e.includes('¡') && e.includes('!')) || (e.includes('¿') && e.includes('?'))) n++;
+  });
+  return n > 1 ? `¡${n} spanish sentences here!`: `¡${n} spanish sentence here!`;
 }
 
 
